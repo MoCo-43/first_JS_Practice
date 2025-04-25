@@ -21,5 +21,3 @@ if (isTrue) {
   // isTrue의 거짓 => else블럭 실행
   console.log('거짓');
 }
-
-
