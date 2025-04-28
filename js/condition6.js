@@ -48,3 +48,16 @@ if (inNum1 === inNum2) {
   console.log("두 수 중에서 큰값은", numMax, "입니다.");
   console.log("두 수 중에서 작은값은", numMin, "입니다.");
 }
+
+
+// 교수님 정답
+// 임의의 2개의수 40~70
+num1 = Math.floor(Math.random() * 31) + 40; // 40 <= x <= 70
+num2 = Math.floor(Math.random() * 31) + 40; // 40 <= x <= 70
+if (num1 > num2) {
+  console.log("2개의 수 중에서 큰값은 " + num1 + ", 작은값은 " + num2);
+} else if(num2 == num1) {
+  console.log("2개의 수는 같습니다.");
+} else {
+  console.log("2개의 수 중에서 큰값은 " + num2 + ", 작은값은 " + num1);
+}
