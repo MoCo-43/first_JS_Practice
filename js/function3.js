@@ -21,4 +21,4 @@ function max_num(inNum1 = 0, inNum2 = 0) {
   }
 }
 
-max_num(200, 90);
+max_num(34, 17);
