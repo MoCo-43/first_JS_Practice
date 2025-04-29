@@ -10,10 +10,10 @@ let data = JSON.parse(json);  // json 문자열을 자바스크립트의 객체�
 /////////////////////////////////////////////////////////////////////
 /////////////////////// 과제 ///////////////////////
 /// button<삭제> 템플릿
-let btnTemplate = "<button class='btn btn-danger' onclick='deleteTr(event)'>삭제</button>";
-
+let btnTemplate = "<button class='btn btn-danger' onclick='deleteTr(event)'>삭제</button>";   // 버튼을 만들기 위한 템플릿릿
 
 let fields = ['id', 'first_name', 'email', 'salary', 'gender', 'salary'];
+
 
 
 // 가져온 json파일을 사원정보라고 가정
@@ -30,6 +30,7 @@ for (let i=0; i<data.length; i++) { // for(let i=0; i<data.length; i++) 반복�
 elist += "</tbody></table>";
 document.write(elist);
 
+
 /////////////////////////////////////////////
 // 1. 버튼 클릭 이벤트
 
@@ -44,6 +45,7 @@ document.querySelector('button#searchBtn').addEventListener('click', function() 
   }
   document.querySelector('table.table>tbody').innerHTML = list;
 }); 
+
 
 /////////////////////////////////////////////
 // 2. select 버튼 클릭 "change";
@@ -60,7 +62,6 @@ document.querySelector('select#selectGender').addEventListener('change', functio
   document.querySelector('table.table tbody').innerHTML = list;
 });
 
-
 function makeTr(emp = {}) {
   let str = "<tr>";
   // 지정한 id, first_name, email 속성을 정의
@@ -75,4 +76,7 @@ function makeTr(emp = {}) {
 
 function deleteTr () {
   // 눌렀을때 이벤트를 발생하게 되는데 라인 한줄을 삭제 하는 함수
+  let del_btn = event.target;         // 클릭한 버튼을 del_btn에 저장
+  let del_tr = del_btn.closest('tr');      // DOM 버튼 주변에 가장 가까운 부모 <tr> 태그를 찾아서 del_tr에 저장
+  del_tr.remove();  // <tr> 삭제
 }
