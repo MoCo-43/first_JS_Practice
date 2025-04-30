@@ -10,3 +10,18 @@ let filterAry = numAry.filter(function (item, idx, ary) {
   // return을 넣지 않으면 undefined 라는 값을 반환하는데, false 값은아닌 falsy라는 값을 반환
 });
 console.log(filterAry);
+
+
+
+///// 문제 /////
+/// salary가 5000이 넘는 사원들을 empAry에 저장
+
+let data = JSON.parse(json);  // json파일을 파싱해서 json을 데이터에 넣는다
+let empAry = data.filter(function (item) {  // empAry data를 필터하고 function item
+  if(item.salary >= 5000) { // salary가 5000넘는 사원이 있다면
+    return true;  // true값 반환
+  } else {
+    return false;
+  }
+})
+console.log(empAry);
